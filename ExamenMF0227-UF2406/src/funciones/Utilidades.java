@@ -2,8 +2,14 @@ package funciones;
 
 public class Utilidades {
 
-	
-
+	/**
+	 *  Función que devuelve valor de calificacion media del alumno como
+	 *  Suspenso, Bien, Notable, Sobresaliente y Matricula segun la nota numerica obtenica.
+	 * @param double nota se pasa como parametro la nota media del alumno
+	 * @return String devuelve valor indicado anteriormente de la nota media
+	 * @throws ArithmeticException devuelve esta excepcion si la nota pasada como parametro es inferior a 0 
+	 * o superior a 10
+	 */
 	public String devuelveNota(double nota) {
 		String descripcion = "Matrícula";
 		

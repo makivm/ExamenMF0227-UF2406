@@ -14,6 +14,7 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Font;
 
 public class VentanaCalculaMedia extends JFrame {
 
@@ -54,6 +55,7 @@ public class VentanaCalculaMedia extends JFrame {
 		contentPane.setLayout(new MigLayout("", "[91.00,fill][grow,fill][56.00,fill][grow,fill][fill][grow,fill]", "[][fill][][][][][][]"));
 		
 		JLabel lblNewLabel = new JLabel("Nombre:");
+		lblNewLabel.setFont(new Font("Verdana", Font.PLAIN, 14));
 		contentPane.add(lblNewLabel, "cell 0 0,alignx trailing");
 		
 		textNombre = new JTextField();
@@ -61,6 +63,7 @@ public class VentanaCalculaMedia extends JFrame {
 		textNombre.setColumns(10);
 		
 		JLabel lblNewLabel_1 = new JLabel("UF2404:");
+		lblNewLabel_1.setFont(new Font("Verdana", Font.PLAIN, 14));
 		contentPane.add(lblNewLabel_1, "cell 0 1,alignx trailing");
 		
 		textUF2404 = new JTextField();
@@ -68,6 +71,7 @@ public class VentanaCalculaMedia extends JFrame {
 		textUF2404.setColumns(10);
 		
 		JLabel lblNewLabel_2 = new JLabel("UF2405:");
+		lblNewLabel_2.setFont(new Font("Verdana", Font.PLAIN, 14));
 		contentPane.add(lblNewLabel_2, "cell 2 1,alignx left");
 		
 		textUF2405 = new JTextField();
@@ -75,6 +79,7 @@ public class VentanaCalculaMedia extends JFrame {
 		textUF2405.setColumns(10);
 		
 		JLabel lblNewLabel_3 = new JLabel("UF2406:");
+		lblNewLabel_3.setFont(new Font("Verdana", Font.PLAIN, 14));
 		contentPane.add(lblNewLabel_3, "cell 4 1,alignx trailing");
 		
 		textUF2406 = new JTextField();
@@ -85,6 +90,7 @@ public class VentanaCalculaMedia extends JFrame {
 		contentPane.add(panel, "cell 0 3 6 1,alignx center,growy");
 		
 		JButton btnCalcular = new JButton("Calcular Nota");
+		btnCalcular.setFont(new Font("Verdana", Font.PLAIN, 14));
 		btnCalcular.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				calcularMedia();
@@ -93,15 +99,19 @@ public class VentanaCalculaMedia extends JFrame {
 		panel.add(btnCalcular);
 		
 		JLabel lblNewLabel_4 = new JLabel("Nota Media:");
+		lblNewLabel_4.setFont(new Font("Verdana", Font.PLAIN, 14));
 		contentPane.add(lblNewLabel_4, "cell 0 5,alignx trailing");
 		
 		lblNota = new JLabel("0.0");
+		lblNota.setFont(new Font("Verdana", Font.PLAIN, 14));
 		contentPane.add(lblNota, "cell 1 5");
 		
 		JLabel lblNewLabel_5 = new JLabel("Resultado:");
+		lblNewLabel_5.setFont(new Font("Verdana", Font.PLAIN, 14));
 		contentPane.add(lblNewLabel_5, "cell 0 6,alignx trailing");
 		
 		lblResultado = new JLabel("No calculado aún");
+		lblResultado.setFont(new Font("Verdana", Font.PLAIN, 14));
 		contentPane.add(lblResultado, "cell 1 6");
 	}
 
@@ -114,7 +124,7 @@ public class VentanaCalculaMedia extends JFrame {
 		lblNota.setText(""+media);
 		
 		Utilidades u=new Utilidades();
-		lblResultado.setText(nombre+"ha sacado un "+u.devuelveNota(media));
+		lblResultado.setText(nombre+" ha sacado un "+u.devuelveNota(media));
 		
 	}
 
